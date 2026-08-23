@@ -2,32 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Noir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Black Noir | Premium</title>
+    <!-- Pulling in a luxury Serif font and a clean Sans-Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <h1 class="logo">Black Noir</h1>
-            <ul class="nav-links">
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Cart (0)</a></li>
-            </ul>
-        </nav>
+<body class="fade-in">
+
+    <!-- Top Promo Bar -->
+    <div class="promo-bar">
+        COMPLIMENTARY SHIPPING ON ALL ORDERS OVER $200
+    </div>
+
+    <!-- Main Header -->
+    <header class="site-header">
+        <div class="header-icon menu-btn">☰</div>
+        <div class="logo">BLACK NOIR</div>
+        <div class="header-icons">
+            <span class="header-icon">🔍</span>
+            <span class="header-icon">🛒</span>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h2>New Arrivals</h2>
-            <p>Dark, minimalist, and built to last.</p>
-            <button class="shop-btn">Shop Now</button>
-        </section>
-    </main>
+    <!-- Full-Screen Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="subtitle">COLLECTION 01</p>
+            <h1 class="hero-title">The Fall Edit</h1>
+            <a href="#shop" class="btn-primary">DISCOVER</a>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Black Noir. All rights reserved.</p>
-    </footer>
+    <!-- Product Grid Section -->
+    <section id="shop" class="product-section">
+        <div class="section-header">
+            <h2>Curated Arrivals</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p class="product-name">Heavyweight Hoodie</p>
+                    <p class="product-price">$120.00</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p class="product-name">Technical Cargo</p>
+                    <p class="product-price">$180.00</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p class="product-name">Washed Vintage Tee</p>
+                    <p class="product-price">$65.00</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <p class="product-name">Distressed Denim</p>
+                    <p class="product-price">$210.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
