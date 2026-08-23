@@ -35,15 +35,15 @@
         </button>
 
         <!-- Logo -->
-        <a href="#" class="logo-container" aria-label="Black Noir Home">
+        <a href="index.html" class="logo-container" aria-label="Black Noir Home">
             <img src="./%E2%81%A0images/Logo.PNG" alt="BLACK NOIR" class="brand-logo">
         </a>
 
         <!-- Desktop Navigation -->
         <nav class="desktop-nav">
-            <a href="#shop">SHOP</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+            <a href="coming-soon.html">SHOP</a>
+            <a href="coming-soon.html">ABOUT</a>
+            <a href="coming-soon.html">CONTACT</a>
         </nav>
 
         <!-- Header Icons -->
@@ -74,9 +74,9 @@
         </button>
         <div class="mobile-menu-inner">
             <p class="mobile-menu-label">BLACK NOIR</p>
-            <a href="#shop">SHOP</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+            <a href="coming-soon.html">SHOP</a>
+            <a href="coming-soon.html">ABOUT</a>
+            <a href="coming-soon.html">CONTACT</a>
             <div class="mobile-menu-divider"></div>
             <p>WORLDWIDE SHIPPING</p>
             <p>SECURE CHECKOUT</p>
@@ -108,7 +108,7 @@
                 <p class="hero-eyebrow">COLLECTION 01</p>
                 <h1 class="hero-title">NOIR — OMBRE</h1>
                 <p class="hero-description">Where imagination becomes reality.</p>
-                <a href="#shop" class="btn-primary">DISCOVER DROPS</a>
+                <a href="coming-soon.html" class="btn-primary">DISCOVER DROPS</a>
             </div>
             <div class="hero-scroll">
                 <span>SCROLL</span>
@@ -249,15 +249,15 @@
             </div>
             <div class="footer-column">
                 <h3>EXPLORE</h3>
-                <a href="#shop">Shop</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="coming-soon.html">Shop</a>
+                <a href="coming-soon.html">About</a>
+                <a href="coming-soon.html">Contact</a>
             </div>
             <div class="footer-column">
                 <h3>INFORMATION</h3>
-                <a href="#">Shipping</a>
-                <a href="#">Returns</a>
-                <a href="#">Privacy</a>
+                <a href="coming-soon.html">Shipping</a>
+                <a href="coming-soon.html">Returns</a>
+                <a href="coming-soon.html">Privacy</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -334,7 +334,9 @@
 
         // Quick Add to Bag Logic
         document.querySelectorAll(".quick-add").forEach(button => {
-            button.addEventListener("click", function () {
+            button.addEventListener("click", function (e) {
+                e.preventDefault(); // Prevent navigating if wrapped in a link
+                e.stopPropagation();
                 cartItems++;
                 cartCount.textContent = cartItems;
                 
