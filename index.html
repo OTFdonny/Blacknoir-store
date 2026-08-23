@@ -97,6 +97,30 @@
     </div>
 
     <!-- ================================
+         CART DRAWER
+    ================================= -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>YOUR BAG</h3>
+            <button class="cart-close" id="cartClose" aria-label="Close bag">×</button>
+        </div>
+        
+        <div class="cart-items" id="cartItemsContainer">
+            <p class="empty-cart-msg">Your bag is currently empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>SUBTOTAL</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <p class="cart-taxes">Shipping & taxes calculated at checkout</p>
+            <a href="coming-soon.html" class="btn-primary checkout-btn">SECURE CHECKOUT</a>
+        </div>
+    </div>
+
+    <!-- ================================
          MAIN CONTENT
     ================================= -->
     <main>
@@ -128,11 +152,11 @@
 
             <div class="product-grid">
                 <!-- PRODUCT 1 -->
-                <article class="product-card" data-name="Signature Heavyweight Knit">
+                <article class="product-card" data-name="Signature Heavyweight T">
                     <div class="product-image-container">
                         <span class="product-number">01</span>
                         <img src="./%E2%81%A0images/Brown.JPG" alt="Signature Heavyweight Knit" class="product-img">
-                        <button class="quick-add" type="button" data-product="Signature Heavyweight Knit">ADD TO BAG</button>
+                        <button class="quick-add" type="button">ADD TO BAG</button>
                     </div>
                     <div class="product-info">
                         <div>
@@ -144,11 +168,11 @@
                 </article>
 
                 <!-- PRODUCT 2 -->
-                <article class="product-card" data-name="Washed Denim Utility Short">
+                <article class="product-card" data-name="Washed Denim Short">
                     <div class="product-image-container">
                         <span class="product-number">02</span>
                         <img src="./%E2%81%A0images/Jeanshorts.JPG" alt="Washed Denim Utility Short" class="product-img">
-                        <button class="quick-add" type="button" data-product="Washed Denim Utility Short">ADD TO BAG</button>
+                        <button class="quick-add" type="button">ADD TO BAG</button>
                     </div>
                     <div class="product-info">
                         <div>
@@ -164,7 +188,7 @@
                     <div class="product-image-container">
                         <span class="product-number">03</span>
                         <img src="./%E2%81%A0images/Long.PNG" alt="Structured Longline Outerwear" class="product-img">
-                        <button class="quick-add" type="button" data-product="Structured Longline Outerwear">ADD TO BAG</button>
+                        <button class="quick-add" type="button">ADD TO BAG</button>
                     </div>
                     <div class="product-info">
                         <div>
@@ -176,11 +200,11 @@
                 </article>
 
                 <!-- PRODUCT 4 -->
-                <article class="product-card" data-name="Essential Editorial Silhouette">
+                <article class="product-card" data-name="Women Denim Jacket">
                     <div class="product-image-container">
                         <span class="product-number">04</span>
                         <img src="./%E2%81%A0images/Women.PNG" alt="Essential Editorial Silhouette" class="product-img">
-                        <button class="quick-add" type="button" data-product="Essential Editorial Silhouette">ADD TO BAG</button>
+                        <button class="quick-add" type="button">ADD TO BAG</button>
                     </div>
                     <div class="product-info">
                         <div>
@@ -196,7 +220,7 @@
                     <div class="product-image-container">
                         <span class="product-number">05</span>
                         <img src="./%E2%81%A0images/Panther.PNG" alt="Limited Edition Graphic Knit" class="product-img">
-                        <button class="quick-add" type="button" data-product="Limited Edition Graphic Knit">ADD TO BAG</button>
+                        <button class="quick-add" type="button">ADD TO BAG</button>
                     </div>
                     <div class="product-info">
                         <div>
@@ -208,11 +232,11 @@
                 </article>
 
                 <!-- PRODUCT 6 -->
-                <article class="product-card" data-name="Complete Ensemble Set">
+                <article class="product-card" data-name="Complete Noir Set">
                     <div class="product-image-container">
                         <span class="product-number">06</span>
                         <img src="./%E2%81%A0images/Full.PNG" alt="Complete Ensemble Set" class="product-img">
-                        <button class="quick-add" type="button" data-product="Complete Ensemble Set">ADD TO BAG</button>
+                        <button class="quick-add" type="button">ADD TO BAG</button>
                     </div>
                     <div class="product-info">
                         <div>
@@ -270,6 +294,7 @@
          JAVASCRIPT
     ================================= -->
     <script>
+        // Menu & Search Selectors
         const menuButton = document.getElementById("menuButton");
         const menuClose = document.getElementById("menuClose");
         const mobileMenu = document.getElementById("mobileMenu");
@@ -279,10 +304,21 @@
         const searchPanel = document.getElementById("searchPanel");
         const searchInput = document.getElementById("searchInput");
 
-        let cartItems = 0;
-        const cartCount = document.getElementById("cartCount");
+        // Cart Drawer Selectors
+        const cartButton = document.getElementById("cartButton");
+        const cartDrawer = document.getElementById("cartDrawer");
+        const cartClose = document.getElementById("cartClose");
+        const cartOverlay = document.getElementById("cartOverlay");
+        const cartItemsContainer = document.getElementById("cartItemsContainer");
+        const cartSubtotalEl = document.getElementById("cartSubtotal");
+        const cartCountEl = document.getElementById("cartCount");
 
-        // Mobile Menu Toggle
+        // State Array to hold cart items
+        let cartData = [];
+
+        /* =================================
+           Mobile Menu Logic
+        ================================= */
         function openMenu() {
             mobileMenu.classList.add("active");
             mobileMenu.setAttribute("aria-hidden", "false");
@@ -304,7 +340,9 @@
             link.addEventListener("click", closeMenu);
         });
 
-        // Search Panel Toggle
+        /* =================================
+           Search Panel Logic
+        ================================= */
         function openSearch() {
             searchPanel.classList.add("active");
             searchPanel.setAttribute("aria-hidden", "false");
@@ -323,7 +361,6 @@
         searchButton.addEventListener("click", openSearch);
         searchClose.addEventListener("click", closeSearch);
 
-        // Search input form submission behavior
         searchInput.addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
                 event.preventDefault();
@@ -332,14 +369,93 @@
             }
         });
 
-        // Quick Add to Bag Logic
+        /* =================================
+           Cart Drawer Logic
+        ================================= */
+        function openCart() {
+            cartDrawer.classList.add("active");
+            cartOverlay.classList.add("active");
+            document.body.classList.add("no-scroll");
+        }
+
+        function closeCart() {
+            cartDrawer.classList.remove("active");
+            cartOverlay.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+        }
+
+        cartButton.addEventListener("click", openCart);
+        cartClose.addEventListener("click", closeCart);
+        cartOverlay.addEventListener("click", closeCart);
+
+        // Render Cart UI dynamically based on array
+        function updateCartUI() {
+            cartCountEl.textContent = cartData.length;
+
+            if (cartData.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart-msg">Your bag is currently empty.</p>';
+                cartSubtotalEl.textContent = "$0.00";
+                return;
+            }
+
+            cartItemsContainer.innerHTML = "";
+            let subtotal = 0;
+
+            cartData.forEach((item, index) => {
+                subtotal += item.price;
+
+                const itemEl = document.createElement('div');
+                itemEl.classList.add('cart-item');
+                itemEl.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.collection}</p>
+                        <span class="cart-item-price">$${item.price.toFixed(2)}</span>
+                        <button class="cart-item-remove" data-index="${index}">REMOVE</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(itemEl);
+            });
+
+            cartSubtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+
+            // Add event listeners to newly generated remove buttons
+            document.querySelectorAll('.cart-item-remove').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const idx = parseInt(this.getAttribute('data-index'));
+                    cartData.splice(idx, 1);
+                    updateCartUI();
+                });
+            });
+        }
+
+        // Add to Bag Button Listeners
         document.querySelectorAll(".quick-add").forEach(button => {
             button.addEventListener("click", function (e) {
-                e.preventDefault(); // Prevent navigating if wrapped in a link
+                e.preventDefault();
                 e.stopPropagation();
-                cartItems++;
-                cartCount.textContent = cartItems;
                 
+                // Get product details dynamically from the surrounding HTML
+                const card = button.closest('.product-card');
+                const name = card.getAttribute('data-name');
+                const priceText = card.querySelector('.product-price').textContent.replace('$', '');
+                const price = parseFloat(priceText);
+                const imageSrc = card.querySelector('.product-img').getAttribute('src');
+                const collectionText = card.querySelector('.product-info p').textContent;
+                
+                // Push item to cart array
+                cartData.push({
+                    name: name,
+                    price: price,
+                    image: imageSrc,
+                    collection: collectionText
+                });
+                
+                updateCartUI();
+                openCart(); // Instantly open the drawer to show the item was added
+                
+                // Visual Button Feedback
                 const originalText = button.textContent;
                 button.textContent = "ADDED";
                 button.classList.add("added");
@@ -351,11 +467,12 @@
             });
         });
 
-        // Global ESC key listener
+        // Global ESC key listener for all overlays
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
                 closeMenu();
                 closeSearch();
+                closeCart();
             }
         });
     </script>
