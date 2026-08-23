@@ -418,9 +418,8 @@ h2 {
 .hero-background {
     position: absolute;
     inset: 0;
-
-    background-image: url("./images/Street.PNG");
-
+    
+    /* Background image is now set inline in HTML to preserve the invisible string */
     background-size: cover;
     background-position: center center;
 
@@ -430,15 +429,12 @@ h2 {
 }
 
 @keyframes heroZoom {
-
     from {
         transform: scale(1.08);
     }
-
     to {
         transform: scale(1);
     }
-
 }
 
 .hero-overlay {
@@ -470,17 +466,14 @@ h2 {
 }
 
 @keyframes heroFade {
-
     from {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 .hero-eyebrow {
@@ -582,18 +575,15 @@ h2 {
 }
 
 @keyframes scrollLine {
-
     0%,
     100% {
         opacity: 0.3;
         transform: scaleY(0.5);
     }
-
     50% {
         opacity: 1;
         transform: scaleY(1);
     }
-
 }
 
 
@@ -938,11 +928,9 @@ h2 {
    ========================================= */
 
 @media (min-width: 768px) {
-
     .menu-button {
         display: none;
     }
-
 }
 
 
@@ -951,7 +939,6 @@ h2 {
    ========================================= */
 
 @media (max-width: 767px) {
-
     .site-header {
         height: 64px;
         padding: 0 18px;
@@ -979,9 +966,7 @@ h2 {
         height: 17px;
     }
 
-
     /* Hero */
-
     .hero {
         height: calc(100vh - 64px);
         min-height: 560px;
@@ -993,13 +978,10 @@ h2 {
 
     .hero-description {
         max-width: 290px;
-
         font-size: 10px;
     }
 
-
     /* Products */
-
     .product-section {
         padding: 70px 18px 90px;
     }
@@ -1019,7 +1001,6 @@ h2 {
 
     .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-
         gap: 45px 12px;
     }
 
@@ -1051,15 +1032,11 @@ h2 {
         left: 8px;
         right: 8px;
         bottom: 8px;
-
         padding: 11px 5px;
-
         font-size: 7px;
     }
 
-
     /* Brand */
-
     .brand-section {
         min-height: 520px;
         padding: 80px 25px;
@@ -1073,18 +1050,14 @@ h2 {
         font-size: 9px;
     }
 
-
     /* Footer */
-
     .site-footer {
         padding: 60px 25px 25px;
     }
 
     .footer-grid {
         grid-template-columns: 1fr 1fr;
-
         gap: 45px;
-
         padding-bottom: 50px;
     }
 
@@ -1094,10 +1067,8 @@ h2 {
 
     .footer-bottom {
         display: block;
-
         line-height: 2.5;
     }
-
 }
 
 
@@ -1106,7 +1077,6 @@ h2 {
    ========================================= */
 
 @media (max-width: 380px) {
-
     .hero-title {
         font-size: 36px;
     }
@@ -1118,7 +1088,6 @@ h2 {
     .product-grid {
         gap: 40px 10px;
     }
-
 }
 
 
@@ -1127,7 +1096,6 @@ h2 {
    ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
     }
@@ -1138,5 +1106,4 @@ h2 {
         animation: none !important;
         transition: none !important;
     }
-
 }
