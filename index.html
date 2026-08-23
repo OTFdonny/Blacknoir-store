@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Black Noir | Premium</title>
-    <!-- Pulling in a luxury Serif font and a clean Sans-Serif -->
+    <title>Black Noir | Luxury Apparel</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,26 +11,28 @@
 
     <!-- Top Promo Bar -->
     <div class="promo-bar">
-        COMPLIMENTARY SHIPPING ON ALL ORDERS OVER $200
+        COMPLIMENTARY WORLDWIDE SHIPPING ON ORDERS OVER $200
     </div>
 
-    <!-- Main Header -->
+    <!-- Main Luxury Header -->
     <header class="site-header">
         <div class="header-icon menu-btn">☰</div>
-        <div class="logo">BLACK NOIR</div>
+        <div class="logo-container">
+            <img src="images/Logo.png" alt="Black Noir" class="brand-logo" style="height: 24px;">
+        </div>
         <div class="header-icons">
             <span class="header-icon">🔍</span>
             <span class="header-icon">🛒</span>
         </div>
     </header>
 
-    <!-- Full-Screen Hero Section -->
-    <section class="hero">
+    <!-- Cinematic Hero Section -->
+    <section class="hero" style="background-image: url('images/Street.png'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="subtitle">COLLECTION 01</p>
             <h1 class="hero-title">The Fall Edit</h1>
-            <a href="#shop" class="btn-primary">DISCOVER</a>
+            <a href="#shop" class="btn-primary">DISCOVER DROPS</a>
         </div>
     </section>
 
@@ -39,43 +40,84 @@
     <section id="shop" class="product-section">
         <div class="section-header">
             <h2>Curated Arrivals</h2>
-            <a href="#" class="view-all">View All</a>
+            <span class="trademark-tag">
+                <img src="images/Trademark.png" alt="Trademark" style="height: 12px; opacity: 0.7;">
+            </span>
         </div>
         
         <div class="product-grid">
+            <!-- Product 1 -->
             <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <p class="product-name">Heavyweight Hoodie</p>
-                    <p class="product-price">$120.00</p>
+                <div class="product-image-container">
+                    <img src="images/Brown.jpg" alt="Brown Piece" class="product-img">
                 </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image"></div>
                 <div class="product-info">
-                    <p class="product-name">Technical Cargo</p>
+                    <p class="product-name">Signature Heavyweight Knit</p>
                     <p class="product-price">$180.00</p>
                 </div>
             </div>
             
+            <!-- Product 2 -->
             <div class="product-card">
-                <div class="product-image"></div>
+                <div class="product-image-container">
+                    <img src="images/Jeanshorts.jpg" alt="Jean Shorts" class="product-img">
+                </div>
                 <div class="product-info">
-                    <p class="product-name">Washed Vintage Tee</p>
-                    <p class="product-price">$65.00</p>
+                    <p class="product-name">Washed Denim Utility Short</p>
+                    <p class="product-price">$145.00</p>
                 </div>
             </div>
             
+            <!-- Product 3 -->
             <div class="product-card">
-                <div class="product-image"></div>
+                <div class="product-image-container">
+                    <img src="images/Long.png" alt="Long Piece" class="product-img">
+                </div>
                 <div class="product-info">
-                    <p class="product-name">Distressed Denim</p>
+                    <p class="product-name">Structured Longline Outerwear</p>
+                    <p class="product-price">$290.00</p>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="images/Women.png" alt="Women Line" class="product-img">
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Essential Editorial Silhouette</p>
+                    <p class="product-price">$160.00</p>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="images/Panther.png" alt="Panther Piece" class="product-img">
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Limited Edition Graphic Knit</p>
                     <p class="product-price">$210.00</p>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="images/Full.png" alt="Full Look" class="product-img">
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Complete Ensemble Set</p>
+                    <p class="product-price">$380.00</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Luxury Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 BLACK NOIR. ALL RIGHTS RESERVED.</p>
+    </footer>
 
 </body>
 </html>
