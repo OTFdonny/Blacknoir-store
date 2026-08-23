@@ -3,607 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BLACK NOIR — Luxury Apparel">
+    <title>BLACK NOIR | Luxury Apparel</title>
 
-    <title>Black Noir | Luxury Apparel</title>
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 
-    <!-- PROMO BAR -->
+    <!-- ================================
+         PROMO BAR
+    ================================= -->
     <div class="promo-bar">
         COMPLIMENTARY WORLDWIDE SHIPPING ON ORDERS OVER $200
     </div>
 
-
-    <!-- HEADER -->
+    <!-- ================================
+         HEADER
+    ================================= -->
     <header class="site-header">
-
-        <button class="menu-btn header-button" aria-label="Open menu">
-            ☰
+        <!-- Mobile Menu Trigger -->
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
-        <a href="/" class="logo-container">
-            <img
-                src="/images/Logo.PNG"
-                alt="Black Noir"
-                class="brand-logo"
-            >
+        <!-- Logo -->
+        <a href="#" class="logo-container" aria-label="Black Noir Home">
+            <img src="./images/Logo.PNG" alt="BLACK NOIR" class="brand-logo">
         </a>
 
-        <div class="header-icons">
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <a href="#shop">SHOP</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
 
-            <button class="header-button" aria-label="Search">
-                ⌕
+        <!-- Header Icons -->
+        <div class="header-actions">
+            <button class="header-action" id="searchButton" type="button" aria-label="Search" aria-expanded="false" aria-controls="searchPanel">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="6.5"></circle>
+                    <path d="M16 16L21 21"></path>
+                </svg>
             </button>
 
-            <button class="header-button" aria-label="Shopping bag">
-                ♡
+            <button class="header-action cart-button" id="cartButton" type="button" aria-label="Shopping bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 8h14l-1 13H6L5 8Z"></path>
+                    <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
             </button>
-
         </div>
-
     </header>
 
-
-    <!-- HERO -->
-    <section class="hero">
-
-        <img
-            src="/images/Street.PNG"
-            alt="Black Noir Collection"
-            class="hero-image"
-        >
-
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-
-            <p class="subtitle">
-                COLLECTION 01
-            </p>
-
-            <h1 class="hero-title">
-                The Fall Edit
-            </h1>
-
-            <a href="#shop" class="btn-primary">
-                DISCOVER DROPS
-            </a>
-
+    <!-- ================================
+         MOBILE MENU
+    ================================= -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <button class="mobile-menu-close" id="menuClose" type="button" aria-label="Close menu">
+            ×
+        </button>
+        <div class="mobile-menu-inner">
+            <p class="mobile-menu-label">BLACK NOIR</p>
+            <a href="#shop">SHOP</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+            <div class="mobile-menu-divider"></div>
+            <p>WORLDWIDE SHIPPING</p>
+            <p>SECURE CHECKOUT</p>
         </div>
-
-    </section>
-
-
-    <!-- SHOP -->
-    <main id="shop" class="product-section">
-
-        <div class="section-header">
-
-            <div>
-                <p class="collection-label">
-                    BLACK NOIR / 2026
-                </p>
-
-                <h2>
-                    Curated Arrivals
-                </h2>
-            </div>
-
-            <img
-                src="/images/Trademark.PNG"
-                alt="Black Noir Trademark"
-                class="trademark"
-            >
-
-        </div>
-
-
-        <!-- PRODUCTS -->
-        <div class="product-grid">
-
-
-            <!-- PRODUCT 1 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Brown.JPG"
-                        alt="Signature Heavyweight Knit"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Signature Heavyweight Knit
-                    </h3>
-
-                    <p class="product-price">
-                        $180.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 2 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Jeanshorts.JPG"
-                        alt="Washed Denim Utility Short"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Washed Denim Utility Short
-                    </h3>
-
-                    <p class="product-price">
-                        $145.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 3 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Long.PNG"
-                        alt="Structured Longline Outerwear"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Structured Longline Outerwear
-                    </h3>
-
-                    <p class="product-price">
-                        $290.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 4 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Women.PNG"
-                        alt="Essential Editorial Silhouette"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Essential Editorial Silhouette
-                    </h3>
-
-                    <p class="product-price">
-                        $160.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 5 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Panther.PNG"
-                        alt="Limited Edition Graphic Knit"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Limited Edition Graphic Knit
-                    </h3>
-
-                    <p class="product-price">
-                        $210.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 6 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Full.PNG"
-                        alt="Complete Ensemble Set"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Complete Ensemble Set
-                    </h3>
-
-                    <p class="product-price">
-                        $380.00
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-
-        <img
-            src="/images/Trademark.PNG"
-            alt="Black Noir"
-            class="footer-trademark"
-        >
-
-        <p>
-            © 2026 BLACK NOIR. ALL RIGHTS RESERVED.
-        </p>
-
-    </footer>
-
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Black Noir | Luxury Apparel</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="/style.css">
-</head>
-
-<body>
-
-    <!-- PROMO BAR -->
-    <div class="promo-bar">
-        COMPLIMENTARY WORLDWIDE SHIPPING ON ORDERS OVER $200
     </div>
 
-
-    <!-- HEADER -->
-    <header class="site-header">
-
-        <button class="menu-btn header-button" aria-label="Open menu">
-            ☰
-        </button>
-
-        <a href="/" class="logo-container">
-            <img
-                src="/images/Logo.PNG"
-                alt="Black Noir"
-                class="brand-logo"
-            >
-        </a>
-
-        <div class="header-icons">
-
-            <button class="header-button" aria-label="Search">
-                ⌕
+    <!-- ================================
+         SEARCH PANEL
+    ================================= -->
+    <div class="search-panel" id="searchPanel" aria-hidden="true">
+        <div class="search-inner">
+            <button class="search-close" id="searchClose" type="button" aria-label="Close search">
+                ×
             </button>
-
-            <button class="header-button" aria-label="Shopping bag">
-                ♡
-            </button>
-
+            <p>SEARCH BLACK NOIR</p>
+            <input type="search" id="searchInput" placeholder="Search collection...">
         </div>
+    </div>
 
-    </header>
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-eyebrow">COLLECTION 01</p>
+                <h1 class="hero-title">The Fall Edit</h1>
+                <p class="hero-description">A study in silhouette, texture and understated luxury.</p>
+                <a href="#shop" class="btn-primary">DISCOVER DROPS</a>
+            </div>
+            <div class="hero-scroll">
+                <span>SCROLL</span>
+                <div></div>
+            </div>
+        </section>
 
-
-    <!-- HERO -->
-    <section class="hero">
-
-        <img
-            src="/images/Street.PNG"
-            alt="Black Noir Collection"
-            class="hero-image"
-        >
-
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-
-            <p class="subtitle">
-                COLLECTION 01
-            </p>
-
-            <h1 class="hero-title">
-                The Fall Edit
-            </h1>
-
-            <a href="#shop" class="btn-primary">
-                DISCOVER DROPS
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- SHOP -->
-    <main id="shop" class="product-section">
-
-        <div class="section-header">
-
-            <div>
-                <p class="collection-label">
-                    BLACK NOIR / 2026
-                </p>
-
-                <h2>
-                    Curated Arrivals
-                </h2>
+        <!-- PRODUCT SECTION -->
+        <section class="product-section" id="shop">
+            <div class="section-header">
+                <div>
+                    <p class="section-eyebrow">BLACK NOIR / 2026</p>
+                    <h2>Curated Arrivals</h2>
+                </div>
+                <img src="./images/Trademark.PNG" alt="BLACK NOIR Trademark" class="trademark">
             </div>
 
-            <img
-                src="/images/Trademark.PNG"
-                alt="Black Noir Trademark"
-                class="trademark"
-            >
-
-        </div>
-
-
-        <!-- PRODUCTS -->
-        <div class="product-grid">
-
-
-            <!-- PRODUCT 1 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Brown.JPG"
-                        alt="Signature Heavyweight Knit"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Signature Heavyweight Knit
-                    </h3>
-
-                    <p class="product-price">
-                        $180.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 2 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Jeanshorts.JPG"
-                        alt="Washed Denim Utility Short"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Washed Denim Utility Short
-                    </h3>
-
-                    <p class="product-price">
-                        $145.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 3 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Long.PNG"
-                        alt="Structured Longline Outerwear"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Structured Longline Outerwear
-                    </h3>
-
-                    <p class="product-price">
-                        $290.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 4 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Women.PNG"
-                        alt="Essential Editorial Silhouette"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Essential Editorial Silhouette
-                    </h3>
-
-                    <p class="product-price">
-                        $160.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 5 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Panther.PNG"
-                        alt="Limited Edition Graphic Knit"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Limited Edition Graphic Knit
-                    </h3>
-
-                    <p class="product-price">
-                        $210.00
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCT 6 -->
-            <article class="product-card">
-
-                <a href="#" class="product-image-container">
-
-                    <img
-                        src="/images/Full.PNG"
-                        alt="Complete Ensemble Set"
-                        class="product-img"
-                    >
-
-                </a>
-
-                <div class="product-info">
-
-                    <h3 class="product-name">
-                        Complete Ensemble Set
-                    </h3>
-
-                    <p class="product-price">
-                        $380.00
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
+            <div class="product-grid">
+                <!-- PRODUCT 1 -->
+                <article class="product-card" data-name="Signature Heavyweight Knit">
+                    <div class="product-image-container">
+                        <span class="product-number">01</span>
+                        <img src="./images/Brown.JPG" alt="Signature Heavyweight Knit" class="product-img">
+                        <button class="quick-add" type="button" data-product="Signature Heavyweight Knit">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Signature Heavyweight Knit</h3>
+                            <p>Essential Collection</p>
+                        </div>
+                        <span class="product-price">$180.00</span>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 2 -->
+                <article class="product-card" data-name="Washed Denim Utility Short">
+                    <div class="product-image-container">
+                        <span class="product-number">02</span>
+                        <img src="./images/Jeanshorts.JPG" alt="Washed Denim Utility Short" class="product-img">
+                        <button class="quick-add" type="button" data-product="Washed Denim Utility Short">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Washed Denim Utility Short</h3>
+                            <p>Denim Collection</p>
+                        </div>
+                        <span class="product-price">$145.00</span>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 3 -->
+                <article class="product-card" data-name="Structured Longline Outerwear">
+                    <div class="product-image-container">
+                        <span class="product-number">03</span>
+                        <img src="./images/Long.PNG" alt="Structured Longline Outerwear" class="product-img">
+                        <button class="quick-add" type="button" data-product="Structured Longline Outerwear">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Structured Longline Outerwear</h3>
+                            <p>Outerwear Collection</p>
+                        </div>
+                        <span class="product-price">$290.00</span>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 4 -->
+                <article class="product-card" data-name="Essential Editorial Silhouette">
+                    <div class="product-image-container">
+                        <span class="product-number">04</span>
+                        <img src="./images/Women.PNG" alt="Essential Editorial Silhouette" class="product-img">
+                        <button class="quick-add" type="button" data-product="Essential Editorial Silhouette">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Essential Editorial Silhouette</h3>
+                            <p>Women / Editorial</p>
+                        </div>
+                        <span class="product-price">$160.00</span>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 5 -->
+                <article class="product-card" data-name="Limited Edition Graphic Knit">
+                    <div class="product-image-container">
+                        <span class="product-number">05</span>
+                        <img src="./images/Panther.PNG" alt="Limited Edition Graphic Knit" class="product-img">
+                        <button class="quick-add" type="button" data-product="Limited Edition Graphic Knit">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Limited Edition Graphic Knit</h3>
+                            <p>Limited Edition</p>
+                        </div>
+                        <span class="product-price">$210.00</span>
+                    </div>
+                </article>
+
+                <!-- PRODUCT 6 -->
+                <article class="product-card" data-name="Complete Ensemble Set">
+                    <div class="product-image-container">
+                        <span class="product-number">06</span>
+                        <img src="./images/Full.PNG" alt="Complete Ensemble Set" class="product-img">
+                        <button class="quick-add" type="button" data-product="Complete Ensemble Set">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Complete Ensemble Set</h3>
+                            <p>Full Look</p>
+                        </div>
+                        <span class="product-price">$380.00</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="brand-section" id="about">
+            <div class="brand-section-inner">
+                <img src="./images/Trademark.PNG" alt="BLACK NOIR" class="brand-trademark">
+                <p class="brand-eyebrow">BLACK NOIR</p>
+                <h2>Designed in darkness.<br>Defined by silhouette.</h2>
+                <p class="brand-copy">
+                    BLACK NOIR explores modern luxury through refined proportions, elevated materials and uncompromising simplicity.
+                </p>
+            </div>
+        </section>
     </main>
 
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-
-        <img
-            src="/images/Trademark.PNG"
-            alt="Black Noir"
-            class="footer-trademark"
-        >
-
-        <p>
-            © 2026 BLACK NOIR. ALL RIGHTS RESERVED.
-        </p>
-
+    <!-- ================================
+         FOOTER
+    ================================= -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <img src="./images/Logo.PNG" alt="BLACK NOIR" class="footer-logo">
+                <p>Contemporary luxury apparel.</p>
+            </div>
+            <div class="footer-column">
+                <h3>EXPLORE</h3>
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h3>INFORMATION</h3>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 BLACK NOIR. ALL RIGHTS RESERVED.</p>
+            <p>MADE FOR THE FEW.</p>
+        </div>
     </footer>
 
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const menuClose = document.getElementById("menuClose");
+        const mobileMenu = document.getElementById("mobileMenu");
 
+        const searchButton = document.getElementById("searchButton");
+        const searchClose = document.getElementById("searchClose");
+        const searchPanel = document.getElementById("searchPanel");
+        const searchInput = document.getElementById("searchInput");
+
+        let cartItems = 0;
+        const cartCount = document.getElementById("cartCount");
+
+        // Mobile Menu Toggle
+        function openMenu() {
+            mobileMenu.classList.add("active");
+            mobileMenu.setAttribute("aria-hidden", "false");
+            menuButton.setAttribute("aria-expanded", "true");
+            document.body.classList.add("no-scroll");
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove("active");
+            mobileMenu.setAttribute("aria-hidden", "true");
+            menuButton.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("no-scroll");
+        }
+
+        menuButton.addEventListener("click", openMenu);
+        menuClose.addEventListener("click", closeMenu);
+
+        document.querySelectorAll(".mobile-menu a").forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        // Search Panel Toggle
+        function openSearch() {
+            searchPanel.classList.add("active");
+            searchPanel.setAttribute("aria-hidden", "false");
+            searchButton.setAttribute("aria-expanded", "true");
+            document.body.classList.add("no-scroll");
+            setTimeout(() => searchInput.focus(), 300);
+        }
+
+        function closeSearch() {
+            searchPanel.classList.remove("active");
+            searchPanel.setAttribute("aria-hidden", "true");
+            searchButton.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("no-scroll");
+        }
+
+        searchButton.addEventListener("click", openSearch);
+        searchClose.addEventListener("click", closeSearch);
+
+        // Search input form submission behavior
+        searchInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                alert(`Searching collection for: "${searchInput.value}"`);
+                closeSearch();
+            }
+        });
+
+        // Quick Add to Bag Logic
+        document.querySelectorAll(".quick-add").forEach(button => {
+            button.addEventListener("click", function () {
+                cartItems++;
+                cartCount.textContent = cartItems;
+                
+                const originalText = button.textContent;
+                button.textContent = "ADDED";
+                button.classList.add("added");
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove("added");
+                }, 1200);
+            });
+        });
+
+        // Global ESC key listener
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeMenu();
+                closeSearch();
+            }
+        });
+    </script>
 </body>
 </html>
